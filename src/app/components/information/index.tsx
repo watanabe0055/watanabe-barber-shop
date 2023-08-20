@@ -1,7 +1,11 @@
+import { INFORMATION } from "@/app/const/infomation";
+import { InformationSection } from "./atoms";
+
 const Information = () => {
+  const infomationList = INFORMATION;
   return (
     <div>
-      <h1>Information</h1>
+      <InformationSection information={infomationList} />
     </div>
   );
 };
