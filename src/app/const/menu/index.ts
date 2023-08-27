@@ -1,7 +1,9 @@
+import { MenuType } from "@/app/type/menu";
+
 /**
  * メニュー一覧
  */
-export const MENU = {
+export const MENU: MenuType = {
   /**
    * カット一覧
    */

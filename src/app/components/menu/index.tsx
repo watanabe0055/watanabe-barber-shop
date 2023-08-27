@@ -4,7 +4,7 @@ import MenuList from "./atoms/menuList";
 const Menu = () => {
   return (
     <>
-      <MenuList meunuList={MENU} />
+      <MenuList menuList={MENU} />
     </>
   );
 };
