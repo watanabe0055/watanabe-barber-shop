@@ -9,11 +9,11 @@ import StarRating from "../menu/atoms/review/starRating";
 const Review = () => {
   return (
     <div className="bg-gray-100 p-4 md:p-8 text-gray-900">
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap gap-4 md:gap-8 min-w-0">
         {DUMMY_REVIEWS.map((review, index) => (
           <div
             key={index}
-            className="border p-6 m-3 rounded-md space-y-4 w-full"
+            className="border p-6 rounded-md space-y-4 w-full md:w-[calc(50%-1rem)] min-w-0"
           >
             <div className="pb-4">
               <ReviewTitle title={review.TITLE} />
