@@ -11,8 +11,10 @@ interface PriceDataProps {
 const PriceData: React.FC<PriceDataProps> = ({ item }) => {
   return (
     <>
-      {item.name}
-      <MenuPrice price={item.price} />
+      <div className="m-2 p-2 bg-gray-200 rounded">
+        {item.name}
+        <MenuPrice price={item.price} />
+      </div>
     </>
   );
 };

@@ -6,15 +6,21 @@ type Category = {
  * メニューのカテゴリーを表示するコンポーネント
  */
 const MenuCategory: React.FC<Category> = ({ listName }) => {
+  let displayText;
+
   switch (listName) {
     case "CUT_LIST":
-      return "Cut";
+      displayText = "Cut";
+      break;
     case "COLOR_LIST":
-      return "Color";
+      displayText = "Color";
+      break;
     default:
+      displayText = listName;
       break;
   }
-  return <div>{listName}</div>;
+
+  return <div className="text-lg text-black-500 font-bold">{displayText}</div>;
 };
 
 export default MenuCategory;
