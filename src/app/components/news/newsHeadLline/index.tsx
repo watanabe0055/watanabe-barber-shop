@@ -1,3 +1,4 @@
+import Typography from "@/app/atoms/Typography";
 import { News } from "@/app/libs/client";
 import dayjs from "dayjs";
 
@@ -11,8 +12,13 @@ export const NewsHeadLine = ({ news }: NewsProps) => {
     <>
       <div className="p-4 bg-gray-50 rounded-lg shadow hover:shadow-lg transition-shadow">
         <p className="text-sm text-gray-600">{publishedAt}</p>
-        <h3 className="text-xl font-semibold my-2">タイトル: {news.title}</h3>
-        <h4 className="text-lg text-gray-800">{news.description}</h4>
+        <Typography
+          text={`タイトル:${news.title}`}
+          size="xl"
+          color="black"
+          weight="bold"
+        />
+        <Typography text={news.description} size="l" color="gray" />
       </div>
     </>
   );
