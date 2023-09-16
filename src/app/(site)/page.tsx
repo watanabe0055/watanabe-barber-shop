@@ -4,7 +4,7 @@ import Menu from "../components/menu";
 import NewsListSection from "../components/news";
 import Review from "../components/review";
 
-export const Pages = () => {
+export default function Home() {
   return (
     <>
       <Board />
@@ -14,6 +14,4 @@ export const Pages = () => {
       <NewsListSection />
     </>
   );
-};
-
-export default Pages;
+}
