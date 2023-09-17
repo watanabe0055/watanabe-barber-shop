@@ -1,13 +1,16 @@
+import Image from "next/image";
 import { INFORMATION } from "@/app/const/infomation";
-import { InformationSection } from "./atoms";
+import { Information } from "./atoms";
 import GlassMorphism from "@/app/atoms/GlassMorphism";
 
-const Information = () => {
+const InformationSection = () => {
   const infomationList = INFORMATION;
   return (
-    <GlassMorphism>
-      <InformationSection information={infomationList} />
-    </GlassMorphism>
+    <>
+      <GlassMorphism>
+        <Information information={infomationList} />
+      </GlassMorphism>
+    </>
   );
 };
-export default Information;
+export default InformationSection;

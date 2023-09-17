@@ -13,11 +13,12 @@ const BoardSection = () => {
   const title = CONCEPT.TITLE;
   return (
     <>
-      <div className="relative h-200">
+      <div className="relative">
         <Image
           src="/splash_00175.jpg"
           alt={"コンセプトのバックイメージ"}
-          layout="fill"
+          layout={`fill`}
+          objectFit={`cover`}
         />
         <GlassMorphism>
           <BoardTitle title={title} />
