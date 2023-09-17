@@ -1,12 +1,13 @@
 import { INFORMATION } from "@/app/const/infomation";
 import { InformationSection } from "./atoms";
+import GlassMorphism from "@/app/atoms/GlassMorphism";
 
 const Information = () => {
   const infomationList = INFORMATION;
   return (
-    <div>
+    <GlassMorphism>
       <InformationSection information={infomationList} />
-    </div>
+    </GlassMorphism>
   );
 };
 export default Information;

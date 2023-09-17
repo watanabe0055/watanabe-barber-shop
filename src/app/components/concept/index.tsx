@@ -1,22 +1,31 @@
+import Image from "next/image";
 import { CONCEPT } from "@/app/const/concept";
 import { BoardText } from "./atoms/content/boardText";
 import { BoardTitle } from "./atoms/title";
+import GlassMorphism from "@/app/atoms/GlassMorphism";
 
 /**
  * コンセプトなどの文章を表示するボード
  * @returns
  */
-const Board = () => {
+const BoardSection = () => {
   const textList = CONCEPT.CONTENT;
   const title = CONCEPT.TITLE;
   return (
-    <div className="board bg-gray-100 p-4 md:p-8">
-      <div className="board-inner bg-white p-4 rounded-lg shadow-md max-w-xl mx-auto">
-        <BoardTitle title={title} />
-        <BoardText text={textList} />
+    <>
+      <div className="relative h-200">
+        <Image
+          src="/splash_00175.jpg"
+          alt={"コンセプトのバックイメージ"}
+          layout="fill"
+        />
+        <GlassMorphism>
+          <BoardTitle title={title} />
+          <BoardText text={textList} />
+        </GlassMorphism>
       </div>
-    </div>
+    </>
   );
 };
 
-export default Board;
+export default BoardSection;
