@@ -4,7 +4,7 @@ import GlassMorphism from "@/app/atoms/GlassMorphism";
 import Typography from "@/app/atoms/Typography";
 
 const NewsListSection = async () => {
-  const { contents } = await getList();
+  const { contents } = await getList({ limit: 1, orders: "-publishedAt" });
 
   if (!contents || contents.length === 0) {
     return <h1>No contents</h1>;
