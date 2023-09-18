@@ -5,11 +5,12 @@ import UserInfo from "../menu/atoms/review/userInfo";
 import ReviewText from "../menu/atoms/review/review";
 import ReviewTitle from "../menu/atoms/review/reviewTitle";
 import StarRating from "../menu/atoms/review/starRating";
+import GlassMorphism from "@/app/atoms/GlassMorphism";
 
-const Review = () => {
+const ReviewSection = () => {
   return (
-    <div className="bg-gray-100 p-4 md:p-8 text-gray-900">
-      <div className="flex flex-wrap gap-4 md:gap-8 min-w-0">
+    <GlassMorphism>
+      <section className="flex flex-wrap gap-4 md:gap-8 min-w-0">
         {DUMMY_REVIEWS.map((review, index) => (
           <div
             key={index}
@@ -25,9 +26,9 @@ const Review = () => {
             </div>
           </div>
         ))}
-      </div>
-    </div>
+      </section>
+    </GlassMorphism>
   );
 };
 
-export default Review;
+export default ReviewSection;
