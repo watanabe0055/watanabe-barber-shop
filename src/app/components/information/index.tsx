@@ -1,12 +1,15 @@
 import { INFORMATION } from "@/app/const/infomation";
-import { InformationSection } from "./atoms";
+import { Information } from "./atoms";
+import GlassMorphism from "@/app/atoms/GlassMorphism";
 
-const Information = () => {
+const InformationSection = () => {
   const infomationList = INFORMATION;
   return (
-    <div>
-      <InformationSection information={infomationList} />
-    </div>
+    <>
+      <GlassMorphism>
+        <Information information={infomationList} />
+      </GlassMorphism>
+    </>
   );
 };
-export default Information;
+export default InformationSection;

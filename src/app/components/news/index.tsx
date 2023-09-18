@@ -1,5 +1,7 @@
 import { getList } from "@/app/libs/client";
 import { NewsHeadLine } from "./newsHeadLline";
+import GlassMorphism from "@/app/atoms/GlassMorphism";
+import Typography from "@/app/atoms/Typography";
 
 const NewsListSection = async () => {
   const { contents } = await getList();
@@ -9,17 +11,17 @@ const NewsListSection = async () => {
   }
   return (
     <>
-      <section className="board bg-gray-100 p-4 md:p-8 text-gray-900">
-        <div className="bg-white p-4 rounded-lg shadow-md max-w-xl mx-auto">
-          <h3 className="p-5 text-2xl font-bold text-center border-b border-gray-200 mb-4">
-            Menu
-          </h3>
+      <section>
+        <GlassMorphism>
+          <div className="border-b border-gray-200 pb-2 mb-4">
+            <Typography text="Menu" size="xl3" weight="bold" align="center" />
+          </div>
           <div className="space-y-4">
             {contents.map((news) => (
               <NewsHeadLine key={news.id} news={news} />
             ))}
           </div>
-        </div>
+        </GlassMorphism>
       </section>
     </>
   );
