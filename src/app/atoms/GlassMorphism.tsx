@@ -10,8 +10,8 @@ type GlassMorphismColor = {
 
 type GlassMorphismProps = {
   children: React.ReactNode;
-  // componentType: ComponentType;
-  // GlassmorphColor: GlassMorphismColor;
+  componentType?: ComponentType;
+  GlassmorphColor?: GlassMorphismColor;
 };
 
 const GlassMorphism = ({ children }: GlassMorphismProps) => {

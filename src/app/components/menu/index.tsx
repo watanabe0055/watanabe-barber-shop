@@ -1,12 +1,15 @@
 import { MENU } from "@/app/const/menu";
 import MenuList from "./atoms/menuList";
+import GlassMorphism from "@/app/atoms/GlassMorphism";
 
-const Menu = () => {
+const MenuSection = () => {
   return (
     <>
-      <MenuList menuList={MENU} />
+      <GlassMorphism>
+        <MenuList menuList={MENU} />
+      </GlassMorphism>
     </>
   );
 };
 
-export default Menu;
+export default MenuSection;

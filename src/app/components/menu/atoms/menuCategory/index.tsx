@@ -1,3 +1,5 @@
+import Typography from "@/app/atoms/Typography";
+
 type Category = {
   listName: string;
 };
@@ -20,7 +22,11 @@ const MenuCategory: React.FC<Category> = ({ listName }) => {
       break;
   }
 
-  return <div className="text-lg text-black-500 font-bold">{displayText}</div>;
+  return (
+    <>
+      <Typography text={displayText} size="xl" weight="bold" />
+    </>
+  );
 };
 
 export default MenuCategory;
