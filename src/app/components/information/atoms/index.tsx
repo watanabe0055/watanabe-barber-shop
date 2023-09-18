@@ -1,7 +1,5 @@
 import { InformationSectionProps } from "@/app/type/infomation";
 import { SectionContent } from "./sectionContent";
-import { SectionTitle } from "./title";
-import { BoardTitle } from "../../concept/atoms/title";
 import Typography from "@/app/atoms/Typography";
 
 /**

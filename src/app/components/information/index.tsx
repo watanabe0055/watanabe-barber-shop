@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { INFORMATION } from "@/app/const/infomation";
 import { Information } from "./atoms";
 import GlassMorphism from "@/app/atoms/GlassMorphism";
