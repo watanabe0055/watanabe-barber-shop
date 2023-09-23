@@ -1,3 +1,4 @@
+import NewsContentBlock from "@/app/components/news/newsContentBlock";
 import NewsTitleBlock from "@/app/components/news/newsTitleBlock";
 import { News } from "@/app/libs/client";
 
@@ -6,9 +7,11 @@ type NewsProps = {
 };
 
 const NewsDetailTemplate = ({ news }: NewsProps) => {
+  console.log(news);
   return (
     <>
       <NewsTitleBlock title={news.title} />
+      <NewsContentBlock content={news.content} />
     </>
   );
 };
