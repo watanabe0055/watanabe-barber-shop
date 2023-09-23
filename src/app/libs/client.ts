@@ -1,9 +1,9 @@
-import { createClient } from "microcms-js-sdk";
-import type { MicroCMSQueries } from "microcms-js-sdk";
+import { createClient } from 'microcms-js-sdk';
+import type { MicroCMSQueries } from 'microcms-js-sdk';
 
 export const client = createClient({
-  serviceDomain: process.env.NEXT_PUBLIC_SERVICE_DOMAIN || "",
-  apiKey: process.env.NEXT_PUBLIC_API_KEY || "",
+  serviceDomain: process.env.NEXT_PUBLIC_SERVICE_DOMAIN || '',
+  apiKey: process.env.NEXT_PUBLIC_API_KEY || '',
 });
 
 export type News = {
@@ -18,17 +18,17 @@ export type News = {
 };
 
 if (!process.env.NEXT_PUBLIC_SERVICE_DOMAIN) {
-  throw new Error("MICROCMS_SERVICE_DOMAIN is required");
+  throw new Error('MICROCMS_SERVICE_DOMAIN is required');
 }
 
 if (!process.env.NEXT_PUBLIC_API_KEY) {
-  throw new Error("MICROCMS_API_KEY is required");
+  throw new Error('MICROCMS_API_KEY is required');
 }
 
 // ブログ一覧を取得
 export const getList = async (queries?: MicroCMSQueries) => {
   const listData = await client.getList<News>({
-    endpoint: "news",
+    endpoint: 'news',
     queries,
   });
 
@@ -39,12 +39,9 @@ export const getList = async (queries?: MicroCMSQueries) => {
 };
 
 // ブログの詳細を取得
-export const getDetail = async (
-  contentId: string,
-  queries?: MicroCMSQueries
-) => {
+export const getDetail = async (contentId: string, queries?: MicroCMSQueries) => {
   const detailData = await client.getListDetail<News>({
-    endpoint: "news",
+    endpoint: 'news',
     contentId,
     queries,
   });
