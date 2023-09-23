@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: akiojin/auto-review-github-action@v0.2.1
+      - uses: wata/auto-review-github-action@v0.2.1
         with:
-          openai-api-key: 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
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           target: "cs,yml"
           language: 日本語
