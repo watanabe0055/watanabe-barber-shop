@@ -1,4 +1,5 @@
 import NewsContentBlock from "@/app/components/news/newsContentBlock";
+import NewsCreateTimeBlock from "@/app/components/news/newsCreateTimeBlock";
 import NewsTitleBlock from "@/app/components/news/newsTitleBlock";
 import { News } from "@/app/libs/client";
 
@@ -11,6 +12,7 @@ const NewsDetailTemplate = ({ news }: NewsProps) => {
   return (
     <>
       <NewsTitleBlock title={news.title} />
+      <NewsCreateTimeBlock createTime={news.createdAt} />
       <NewsContentBlock content={news.content} />
     </>
   );

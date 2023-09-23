@@ -10,8 +10,6 @@ type NewsProps = {
 /**
  * ニュース一覧のヘッドライン
  * TODO: hoverをつけているができればglassmorphismの中に入れたい
- * @param param0
- * @returns
  */
 export const NewsHeadLine = ({ news }: NewsProps) => {
   const publishedAt = dayjs(news.createdAt).format("YYYY年MM月DD日");
