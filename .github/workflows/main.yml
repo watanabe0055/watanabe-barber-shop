@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: wata/auto-review-github-action@v0.2.1
+      - uses: watanabe0055/watanabe-barber-shop@main
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           target: "cs,yml"
