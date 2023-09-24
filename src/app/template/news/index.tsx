@@ -8,7 +8,13 @@ type NewsProps = {
 };
 
 const NewsDetailTemplate = ({ news }: NewsProps) => {
-  console.log(news);
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(news.content, "text/html");
+
+  doc.body.childNodes.forEach((node) => {
+    console.log(node);
+  });
+
   return (
     <>
       <NewsTitleBlock title={news.title} />

@@ -8,12 +8,15 @@ type NewsTitleBlockProps = {
  * TODO: objectで取得できるようになったらもっとモダンにする
  */
 const NewsContentBlock = ({ content }: NewsTitleBlockProps) => {
+  console.log(content);
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `${content}`,
-      }}
-    />
+    <>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `${content}`,
+        }}
+      />
+    </>
   );
 };
 
