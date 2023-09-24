@@ -12,7 +12,7 @@ type GlassMorphismProps = {
   children: React.ReactNode;
   componentType?: ComponentType;
   GlassmorphColor?: GlassMorphismColor;
-  onHover: boolean;
+  onHover?: boolean;
 };
 
 /**
