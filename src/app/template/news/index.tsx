@@ -8,12 +8,14 @@ type NewsProps = {
 };
 
 const NewsDetailTemplate = ({ news }: NewsProps) => {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(news.content, "text/html");
+  if (news.content) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(news.content, "text/html");
 
-  doc.body.childNodes.forEach((node) => {
-    console.log(node);
-  });
+    doc.body.childNodes.forEach((node) => {
+      console.log(node);
+    });
+  }
 
   return (
     <>
