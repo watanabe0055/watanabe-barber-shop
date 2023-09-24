@@ -6,26 +6,27 @@ import ReviewText from "../menu/atoms/review/review";
 import ReviewTitle from "../menu/atoms/review/reviewTitle";
 import StarRating from "../menu/atoms/review/starRating";
 import GlassMorphism from "@/app/atoms/GlassMorphism";
+import Typography from "@/app/atoms/Typography";
 
 const ReviewSection = () => {
   return (
-    <GlassMorphism>
-      <section className="flex flex-wrap gap-4 md:gap-8 min-w-0">
-        {DUMMY_REVIEWS.map((review, index) => (
-          <div
-            key={index}
-            className="border p-6 rounded-md space-y-4 w-full md:w-[calc(50%-1rem)] min-w-0"
-          >
-            <div className="pb-4">
-              <ReviewTitle title={review.TITLE} />
-              <StarRating rating={review.RATING} />
-              <div className="flex justify-between text-sm">
-                <ReviewText text={review.REVIEW_TEXT} />
-                <UserInfo userName={review.USER_NAME} date={review.DATA} />
-              </div>
+    <GlassMorphism componentType="div">
+      <section>
+        <Typography text="Review" align="center" size="xl3" weight="bold" />
+        <div className="flex flex-wrap min-w-0 gap-2 md:gap-4">
+          {DUMMY_REVIEWS.map((review, index) => (
+            <div key={index} className="md:w-[calc(50%-1rem)]">
+              <GlassMorphism componentType="div">
+                <ReviewTitle title={review.TITLE} />
+                <StarRating rating={review.RATING} />
+                <div className="flex justify-between">
+                  <ReviewText text={review.REVIEW_TEXT} />
+                  <UserInfo userName={review.USER_NAME} date={review.DATA} />
+                </div>
+              </GlassMorphism>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
     </GlassMorphism>
   );

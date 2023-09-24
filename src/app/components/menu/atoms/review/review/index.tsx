@@ -1,3 +1,4 @@
+import Typography from "@/app/atoms/Typography";
 import React from "react";
 
 interface ReviewTextProps {
@@ -5,7 +6,7 @@ interface ReviewTextProps {
 }
 
 const ReviewText: React.FC<ReviewTextProps> = ({ text }) => {
-  return <p className="text-base">{text}</p>;
+  return <Typography text={text} />;
 };
 
 export default ReviewText;
