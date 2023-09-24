@@ -14,13 +14,10 @@ type GlassMorphismProps = {
   GlassmorphColor?: GlassMorphismColor;
 };
 
-const GlassMorphism = ({ children }: GlassMorphismProps) => {
+const GlassMorphism = ({ componentType, children }: GlassMorphismProps) => {
   return (
-    <div className="p-10">
-      <div
-        className="bg-gray-200/30 backdrop-blur-lg
-    rounded-md border border-gray-200/30 shadow-lg p-5"
-      >
+    <div className={componentType === "div" ? "p-3" : "p-10"}>
+      <div className="p-5 border rounded-md shadow-lg bg-gray-200/30 backdrop-blur-lg border-gray-200/30">
         {children}
       </div>
     </div>
