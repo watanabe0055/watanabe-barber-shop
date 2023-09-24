@@ -16,18 +16,16 @@ export const NewsHeadLine = ({ news }: NewsProps) => {
   return (
     <>
       <div className="p-5">
-        <div className="transition-transform transform hover:scale-102 hover:shadow-md">
-          <GlassMorphism componentType="div">
-            <p className="text-sm text-gray-600">{publishedAt}</p>
-            <Typography
-              text={`タイトル:${news.title}`}
-              size="xl"
-              color="black"
-              weight="bold"
-            />
-            <Typography text={news.description} size="l" color="gray" />
-          </GlassMorphism>
-        </div>
+        <GlassMorphism componentType="div" onHover>
+          <p className="text-sm text-gray-600">{publishedAt}</p>
+          <Typography
+            text={`タイトル:${news.title}`}
+            size="xl"
+            color="black"
+            weight="bold"
+          />
+          <Typography text={news.description} size="l" color="gray" />
+        </GlassMorphism>
       </div>
     </>
   );
