@@ -4,6 +4,7 @@ import useSWR from "swr";
 import { usePathname } from "next/navigation";
 import { News } from "@/app/libs/client";
 import NewsDetailTemplate from "@/app/template/news";
+import { NomalLoading } from "@/app/atoms/Loading";
 
 const NewsShowPage = () => {
   const router = usePathname();
@@ -25,7 +26,12 @@ const NewsShowPage = () => {
   );
 
   if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
+  if (isLoading)
+    return (
+      <div>
+        <NomalLoading />
+      </div>
+    );
 
   return <>{data && <NewsDetailTemplate news={data} />}</>;
 };
