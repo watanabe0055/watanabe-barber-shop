@@ -15,7 +15,7 @@ const NewsListSection = async () => {
       <section>
         <GlassMorphism>
           <div className="pb-2 mb-4 border-b border-gray-200">
-            <Typography text="Menu" size="xl3" weight="bold" align="center" />
+            <Typography text="News" size="xl3" weight="bold" align="center" />
           </div>
           <div className="space-y-4">
             {contents.map((news) => (
