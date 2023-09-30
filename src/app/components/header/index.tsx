@@ -17,12 +17,12 @@ export const HeaderComponent = () => {
         </Link>
         <div className="flex space-x-4">
           <Link href={"/news"} passHref>
-            <p className="block text-lg hover:text-gray-700 transition-colors duration-200">
+            <p className="block text-lg hover:text-blue-700 transition-colors duration-200">
               お知らせ
             </p>
           </Link>
           <Link href={"/menu"} passHref>
-            <p className="block text-lg hover:text-gray-700 transition-colors duration-200">
+            <p className="block text-lg hover:text-blue-700 transition-colors duration-200">
               メニュー
             </p>
           </Link>
