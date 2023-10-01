@@ -12,6 +12,7 @@ export const HeaderComponent = () => {
               alt={"渡辺理髪店のロゴ"}
               width={100}
               height={100}
+              priority
             />
           </div>
         </Link>

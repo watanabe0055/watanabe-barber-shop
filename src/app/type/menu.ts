@@ -12,4 +12,5 @@ export type MenuItem = {
 export type MenuType = {
   CUT_LIST: MenuItem[];
   COLOR_LIST: MenuItem[];
+  PERM_LIST: MenuItem[];
 };

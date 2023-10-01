@@ -7,20 +7,13 @@ type Category = {
 /**
  * メニューのカテゴリーを表示するコンポーネント
  */
-const MenuCategory: React.FC<Category> = ({ listName }) => {
-  let displayText;
-
-  switch (listName) {
-    case "CUT_LIST":
-      displayText = "Cut";
-      break;
-    case "COLOR_LIST":
-      displayText = "Color";
-      break;
-    default:
-      displayText = listName;
-      break;
-  }
+const MenuCategory: React.FunctionComponent<Category> = ({ listName }) => {
+  const categoryMap: { [key: string]: string } = {
+    CUT_LIST: "カット",
+    COLOR_LIST: "カラー",
+    PERM_LIST: "パーマ",
+  };
+  const displayText = categoryMap[listName] || listName;
 
   return (
     <>

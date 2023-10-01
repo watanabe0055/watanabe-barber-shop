@@ -1,6 +1,6 @@
 import Board from "../../components/concept";
 import Information from "../../components/information";
-import Menu from "../../components/menu";
+import Menu from "../../components/menu/menuSection";
 import NewsListSection from "../../components/news";
 import Review from "../../components/review";
 
