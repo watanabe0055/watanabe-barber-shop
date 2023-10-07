@@ -1,5 +1,5 @@
 import InformationSection from "../../components/information";
-import MenuSection from "../../components/menu";
+import MenuSection from "../../components/menu/menuSection";
 import NewsListSection from "../../components/news";
 import ReviewSection from "../../components/review";
 import BoardSection from "../../components/concept";

@@ -1,6 +1,6 @@
 import { MenuType } from "@/app/type/menu";
-import MenuCategory from "./menuCategory";
-import PriceData from "./priceData";
+import MenuCategory from "../menuCategory";
+import PriceData from "../../priceData";
 import Typography from "@/app/atoms/Typography";
 
 interface MenuListProps {
