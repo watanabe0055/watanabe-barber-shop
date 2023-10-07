@@ -18,6 +18,7 @@ concurrency:
 jobs:
   review:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: fluxninja/openai-pr-reviewer@latest
         env:
@@ -27,3 +28,7 @@ jobs:
           debug: false
           review_simple_changes: false
           review_comment_lgtm: false
+          openai_light_model: gpt-4 # 好みで変更
+          openai_heavy_model: gpt-4 # 好みで変更
+          openai_timeout_ms: 900000 # 15分.
+          language: ja-JP

@@ -14,8 +14,9 @@ export type MenuType = {
   COLOR_LIST: MenuItem[];
 };
 
-export const test = () => {
-  const a = 1;
-  const b = 2;
-  return a + b;
+export const test1 = () => {
+  const aaa = "aaa";
+  const bbb = "bbb";
+  const c = aaa + bbb;
+  return c;
 };
