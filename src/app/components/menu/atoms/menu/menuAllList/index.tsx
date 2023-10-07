@@ -3,23 +3,44 @@ import { MenuType } from "@/app/type/menu";
 import MenuCategory from "../menuCategory";
 import PriceData from "../../priceData";
 import Typography from "@/app/atoms/Typography";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "react-modal";
+import ButtonComponents from "@/app/atoms/Button";
 
 interface MenuListProps {
   menuList: MenuType;
 }
 
+/**
+ * メニュー一覧のリストを表示するコンポーネント（モーダルあり）
+ * @param menuList メニュー一覧
+ */
 const MenuAllList: React.FC<MenuListProps> = ({ menuList }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
-  Modal.setAppElement("#modal_element");
-  function openModal() {
+  useEffect(() => {
+    Modal.setAppElement("#modal_element");
+  }, []);
+  const openModal = () => {
     setIsOpen(true);
-  }
+  };
 
-  function closeModal() {
+  const closeModal = () => {
     setIsOpen(false);
-  }
+  };
+  const customStyles = {
+    overlay: {
+      backgroundColor: "rgba(202, 202, 202, 0.1)",
+    },
+    content: {
+      width: "90%",
+      height: "90%",
+      margin: "auto",
+      backgroundColor: "rgb(255, 255, 255)",
+      border: "none",
+      borderRadius: "12px",
+      padding: "1rem",
+    },
+  };
   return (
     <>
       <Typography text="Menu" size="xl3" weight="bold" align="center" />
@@ -38,8 +59,13 @@ const MenuAllList: React.FC<MenuListProps> = ({ menuList }) => {
                     isOpen={modalIsOpen}
                     onRequestClose={closeModal}
                     contentLabel="Example Modal"
+                    style={customStyles}
                   >
-                    <button onClick={closeModal}>閉じる</button>
+                    <ButtonComponents
+                      onClick={closeModal}
+                      buttonText="閉じる"
+                      bgColorType="primary"
+                    />
                     <div>
                       <PriceData item={item} />
                     </div>
