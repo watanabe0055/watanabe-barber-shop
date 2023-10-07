@@ -14,7 +14,7 @@ export type MenuType = {
   COLOR_LIST: MenuItem[];
 };
 
-const test = () => {
+export const test = () => {
   const a = 1;
   const b = 2;
   return a + b;
