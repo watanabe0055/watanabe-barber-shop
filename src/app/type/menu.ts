@@ -13,3 +13,9 @@ export type MenuType = {
   CUT_LIST: MenuItem[];
   COLOR_LIST: MenuItem[];
 };
+
+const test = () => {
+  const a = 1;
+  const b = 2;
+  return a + b;
+};
