@@ -3,7 +3,6 @@ import MenuSection from "../../components/menu/menuSection";
 import NewsListSection from "../../components/news";
 import ReviewSection from "../../components/review";
 import BoardSection from "../../components/concept";
-import GoogleMapComponent from "../../components/map";
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
         <MenuSection />
         <ReviewSection />
         <NewsListSection />
-        <GoogleMapComponent />
       </div>
     </>
   );

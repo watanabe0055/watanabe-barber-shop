@@ -12,10 +12,14 @@ const center = {
   lng: 131.6908594,
 };
 
-const zoom = 15;
+const zoom = 20;
 
+/**
+ * GoogleMapを表示するコンポーネント
+ */
 const GoogleMapComponent = () => {
   const googleMapApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAP_AKI_KEY || "";
+
   return (
     <LoadScript googleMapsApiKey={googleMapApiKey}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={zoom}>
