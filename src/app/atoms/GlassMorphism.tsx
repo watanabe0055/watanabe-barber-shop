@@ -1,5 +1,5 @@
 "use client";
-import { deviseSize } from "../libs/device";
+import { deviseSize } from "../lib/device";
 
 type ComponentType = "section" | "div";
 type GlassMorphismColor = {
