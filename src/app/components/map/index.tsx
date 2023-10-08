@@ -12,7 +12,7 @@ const center = {
   lng: 131.6908494,
 };
 
-const zoom = 20;
+const zoom = 17;
 
 /**
  * GoogleMapを表示するコンポーネント
