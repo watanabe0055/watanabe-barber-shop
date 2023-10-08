@@ -9,7 +9,7 @@ const containerStyle = {
 
 const center = {
   lat: 32.6511929,
-  lng: 131.6908594,
+  lng: 131.6908494,
 };
 
 const zoom = 20;
