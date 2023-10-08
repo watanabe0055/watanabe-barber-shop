@@ -17,7 +17,6 @@ type GlassMorphismProps = {
   GlassmorphColor?: GlassMorphismColor;
   onHover?: boolean;
 };
-const { isMobile } = deviseSize();
 /**
  * グラスモーフィズムのコンポーネント
  *  @param children 表示するコンポーネント
@@ -30,6 +29,7 @@ const GlassMorphism = ({
   children,
   onHover = false,
 }: GlassMorphismProps) => {
+  const { isMobile } = deviseSize();
   const hoverClasses = onHover
     ? "transform transition-transform duration-300 hover:scale-105"
     : "";
