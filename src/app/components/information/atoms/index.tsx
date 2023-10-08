@@ -12,7 +12,9 @@ export const Information = ({ information }: InformationSectionProps) => (
     {Object.entries(information).map(([key, section]) => (
       <div key={key} className="my-4">
         <Typography text={section.TITLE} size="xl" weight="bold" />
-        <SectionContent content={section} />
+        <div className="ml-2">
+          <SectionContent content={section} />
+        </div>
       </div>
     ))}
   </>
