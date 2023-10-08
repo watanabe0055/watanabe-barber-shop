@@ -1,3 +1,6 @@
+"use client";
+import { deviseSize } from "../lib/device";
+
 type ComponentType = "section" | "div";
 type GlassMorphismColor = {
   RED: "bg-red-200";
@@ -14,7 +17,6 @@ type GlassMorphismProps = {
   GlassmorphColor?: GlassMorphismColor;
   onHover?: boolean;
 };
-
 /**
  * グラスモーフィズムのコンポーネント
  *  @param children 表示するコンポーネント
@@ -27,18 +29,31 @@ const GlassMorphism = ({
   children,
   onHover = false,
 }: GlassMorphismProps) => {
+  const { isMobile } = deviseSize();
   const hoverClasses = onHover
     ? "transform transition-transform duration-300 hover:scale-105"
     : "";
 
   return (
-    <div className={componentType === "div" ? "p-3" : "p-10"}>
-      <div
-        className={`p-5 border rounded-md shadow-lg bg-gray-200/30 backdrop-blur-lg border-gray-200/30 ${hoverClasses}`}
-      >
-        {children}
-      </div>
-    </div>
+    <>
+      {isMobile ? (
+        <div className="p-2">
+          <div
+            className={`p-5 border rounded-md shadow-lg bg-gray-200/30 backdrop-blur-lg border-gray-200/30 ${hoverClasses}`}
+          >
+            {children}
+          </div>
+        </div>
+      ) : (
+        <div className={componentType === "div" ? "p-3" : "p-10"}>
+          <div
+            className={`p-5 border rounded-md shadow-lg bg-gray-200/30 backdrop-blur-lg border-gray-200/30 ${hoverClasses}`}
+          >
+            {children}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

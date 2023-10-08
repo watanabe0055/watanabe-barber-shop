@@ -5,7 +5,7 @@ type Information = {
   };
   ACCESS: {
     TITLE: string;
-    VALUE: string;
+    TEXT_LIST: Array<string>;
   };
   STATION: {
     TITLE: string;
