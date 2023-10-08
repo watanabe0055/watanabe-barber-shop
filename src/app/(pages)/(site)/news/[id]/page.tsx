@@ -19,9 +19,10 @@ const NewsShowPage = () => {
     });
     return response.json();
   }
+  const serviceDomain = process.env.NEXT_PUBLIC_SERVICE_DOMAIN || "";
 
   const { data, error, isLoading } = useSWR(
-    `https://${process.env.NEXT_PUBLIC_SERVICE_DOMAIN}.microcms.io/api/v1${router}`,
+    `https://${serviceDomain}.microcms.io/api/v1${router}`,
     fetcher
   );
 
